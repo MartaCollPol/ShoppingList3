@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="14dp">
+
+    <CheckBox
+        android:id="@+id/shopping_item"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:paddingLeft="8dp"
+        android:text="CheckBox"
+        android:textSize="14sp"
+        android:clickable="false"
+        android:focusable="false"/> <!-- clickable és la propietat que evita que el checkbox sigui clickable ja que
+        el que volem que es cliqui és tot l'item de la llista i no només el checkbox. Amb la propietat
+        focusable aconseguim que el comande 'click' circuli cap a les capes inferiors, és a dir, si ara l'estructura del
+        nostre layout general és RelativeLayout->ListView->LinearLayout->CheckBox, el click no s'aplicarà al checkbox sinò al linearlayout,
+        que en ultima instància no és més que un item de la llista. -->
+</LinearLayout>
